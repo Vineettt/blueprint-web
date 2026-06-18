@@ -1,0 +1,30 @@
+export enum HttpMethod {
+  CONNECT = 'CONNECT',
+  DELETE = 'DELETE',
+  GET = 'GET',
+  HEAD = 'HEAD',
+  OPTIONS = 'OPTIONS',
+  PATCH = 'PATCH',
+  POST = 'POST',
+  PUT = 'PUT',
+  TRACE = 'TRACE',
+}
+
+export enum Endpoint {
+  LOGIN = 'login',
+  REGISTER = 'register',
+  REFRESH_TOKEN = 'refresh-token',
+  ROLE = 'role',
+  ROLES = 'roles',
+  ROUTES = 'routes',
+  ROUTE = 'route',
+  ROLE_ROUTE_MAPPINGS = 'role-route-mappings',
+  ROLE_ROUTE_MAPPING = 'role-route-mapping',
+  USER = 'user',
+  USERS = 'users',
+  USER_STATUS = 'user-status',
+  USER_ROLE_MAPPING = 'user-role-mapping',
+  USER_ROLE_MAPPINGS = 'user-role-mappings',
+  HEALTH = 'health',
+  LOGOUT = 'logout',
+}

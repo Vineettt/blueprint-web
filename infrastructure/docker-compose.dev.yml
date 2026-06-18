@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  # Blueprint Web Service (Development)
+  web:
+    build:
+      context: ..
+      dockerfile: infrastructure/Dockerfile
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    volumes:
+      - ../src:/app/src
+      - ../public:/app/public
+      - ../package.json:/app/package.json
+      - ../pnpm-lock.yaml:/app/pnpm-lock.yaml
+    restart: unless-stopped
+    command: ['pnpm', 'dev']
+
+networks:
+  default:
+    name: blueprint-web-dev-network
+    driver: bridge

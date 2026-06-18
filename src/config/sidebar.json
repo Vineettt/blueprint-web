@@ -1,0 +1,83 @@
+{
+  "config": {
+    "collapsible": true,
+    "collapsibleType": "icon",
+    "showRail": true
+  },
+  "header": {
+    "title": "Blueprint",
+    "subtitle": "",
+    "icon": "LayoutDashboard"
+  },
+  "navigation": [
+    {
+      "title": "Dashboard",
+      "url": "/dashboard",
+      "icon": "LayoutDashboard",
+      "permissionRequired": false,
+      "permissionArray": []
+    },
+    {
+      "title": "User Management",
+      "url": "",
+      "icon": "Users",
+      "permissionRequired": true,
+      "permissionArray": ["users_post", "user_role_mapping_post"],
+      "children": [
+        {
+          "title": "Users",
+          "url": "/account/users",
+          "icon": "UserCircle",
+          "permissionRequired": true,
+          "permissionArray": ["users_post"]
+        },
+        {
+          "title": "UR Mapping",
+          "url": "/account/user-role",
+          "icon": "Link",
+          "permissionRequired": true,
+          "permissionArray": ["user_role_mapping_post"]
+        }
+      ]
+    },
+    {
+      "title": "Role & Route Management",
+      "url": "",
+      "icon": "Shield",
+      "permissionRequired": true,
+      "permissionArray": ["role_route_mappings_post", "routes_post", "roles_post"],
+      "children": [
+        {
+          "title": "Role & Route Mapping",
+          "url": "/mapping/route-role",
+          "icon": "GitBranch",
+          "permissionRequired": true,
+          "permissionArray": ["role_route_mappings_post"]
+        },
+        {
+          "title": "Route",
+          "url": "/mapping/route",
+          "icon": "Map",
+          "permissionRequired": true,
+          "permissionArray": ["routes_post"]
+        },
+        {
+          "title": "Role",
+          "url": "/mapping/role",
+          "icon": "UserCheck",
+          "permissionRequired": true,
+          "permissionArray": ["roles_post"]
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "title": "Logout",
+      "url": "#logout",
+      "icon": "LogOut",
+      "action": "logout",
+      "permissionRequired": false
+    }
+  ]
+}
